@@ -1,8 +1,17 @@
 function AddBook() {
+    
+    const handleSubmit = async (book) => {
+        try {
+            console.log(book)
+        } catch {
+            console.log('error, could not save item')
+        }
+    }
+    
     return ( 
         <>
         <h3>Add A Book to Your Library</h3>
-        <form autoComplete='off'>
+        <form autoComplete='off' onSubmit={handleSubmit}>
             <label>Title: </label>
             <input type='text' name='title' required/>
             &nbsp;
@@ -27,6 +36,8 @@ function AddBook() {
                 <option value='to-read'>On the Pile</option>
                 <option value='finished'>Finished</option>
             </select>
+            &nbsp;
+            <button type='submit' value='add-book'>Add to Library</button>
         </form>
         </>    
      )

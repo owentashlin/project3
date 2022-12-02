@@ -7,6 +7,7 @@ require('dotenv').config();
 require('./config/database');
 
 const app = express()
+
 const booksRouter = ('./routes/api/books')
 
 app.use(logger('dev'));
@@ -19,11 +20,11 @@ app.use(require('./config/checkToken'));
 
 // Put all API routes here (before the catch-all)
 app.use('/api/users', require('./routes/api/users'))
-app.use('/api/books', require('./routes/api/books'))
+
 // Protect all routes in the items router
 const ensureLoggedIn = require('./config/ensureLoggedIn')
 
-
+app.use('/api/books', require('./routes/api/books'))
 
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above
