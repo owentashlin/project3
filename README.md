@@ -1,3 +1,8 @@
+"The Reading Room" is a library and creative writing app that allows the user to log, review and share books they are reading. It also provides text and visual writing prompts to inspire users to create and share their own work, and allows fellow users to give feedback on that work.
+
+Logo icon "Book" created by Jojoid, from the Noun Project. (CCBY3.0) <a href="https://thenounproject.com/browse/icons/term/book/" target="_blank" title="Book Icons">Noun Project</a>
+
+<hr></hr>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
