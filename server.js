@@ -4,15 +4,12 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 
 require('dotenv').config();
-// Connect to db after the dotenv above
 require('./config/database');
 
-const app = express();
+const app = express()
+const booksRouter = ('./routes/api/books')
 
 app.use(logger('dev'));
-// Process data in body of request if 
-// Content-Type: 'application/json'
-// and put that data on req.body
 app.use(express.json());
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
@@ -21,10 +18,10 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use(require('./config/checkToken'));
 
 // Put all API routes here (before the catch-all)
-app.use('/api/users', require('./routes/api/users'));
-
+app.use('/api/users', require('./routes/api/users'))
+app.use('/api/books', require('./routes/api/books'))
 // Protect all routes in the items router
-const ensureLoggedIn = require('./config/ensureLoggedIn');
+const ensureLoggedIn = require('./config/ensureLoggedIn')
 
 
 
