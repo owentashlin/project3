@@ -1,0 +1,13 @@
+.editorContainer {
+  padding: 1em;
+  margin: 1em;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.editors {
+  border: 1px blue solid;
+  padding: 1em;
+  margin: 1em;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 90%;
+}

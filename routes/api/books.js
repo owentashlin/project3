@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const booksCtrl = require('../../controllers/api/books')
 
-// router.get('/library', booksCtrl.show)
-router.post('/', booksCtrl.create)
+router.post('/books/:id', booksCtrl.create)
 
 module.exports = router
