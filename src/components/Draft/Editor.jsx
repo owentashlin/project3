@@ -2,7 +2,7 @@ import React from 'react'
 import {Editor, EditorState, RichUtils} from 'draft-js';
 import './Editor.css'
 
-class PageContainer extends React.Component {
+class WritingApp extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -28,18 +28,18 @@ class PageContainer extends React.Component {
   onUnderlineClick = () => {
 		this.onChange(
 			RichUtils.toggleInlineStyle(this.state.editorState, "UNDERLINE")
-		);
-	};
+		)
+	}
 
 	onBoldClick = () => {
-		this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, "BOLD"));
-	};
+		this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, "BOLD"))
+	}
 
 	onItalicClick = () => {
 		this.onChange(
 			RichUtils.toggleInlineStyle(this.state.editorState, "ITALIC")
-		);
-	};
+		)
+	}
 
   render() {
     return (
@@ -56,10 +56,10 @@ class PageContainer extends React.Component {
       <div className='editors'>
         <Editor editorState={this.state.editorState} handleKeyCommand={this.handleKeyCommand} onChange={this.onChange} />
       </div>
-      <button className='save-button'>save</button>
+      <div className='save-button' onClick={console.log(EditorState)}>save</div>
     </div> 
     )
   }
 }
 
- export default PageContainer
+ export default WritingApp
