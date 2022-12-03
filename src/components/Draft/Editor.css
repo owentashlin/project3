@@ -10,4 +10,19 @@
   margin: 1em;
   font-family:'Courier New', Courier, monospace;
   font-size: 90%;
+  text-align: left;
+}
+
+button {
+  border: 1px solid black;
+  width: 30px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+
+.save-button {
+  border: 1px solid black;
+  width: 60px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 16px;
 }
