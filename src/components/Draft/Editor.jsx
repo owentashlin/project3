@@ -40,6 +40,12 @@ class WritingApp extends React.Component {
 			RichUtils.toggleInlineStyle(this.state.editorState, "ITALIC")
 		)
 	}
+  
+  // handleSave = function() {
+  //   let body = EditorState
+  //   JSON.stringify(EditorState)
+  //   console.log(body)
+  // }
 
   render() {
     return (
@@ -56,7 +62,7 @@ class WritingApp extends React.Component {
       <div className='editors'>
         <Editor editorState={this.state.editorState} handleKeyCommand={this.handleKeyCommand} onChange={this.onChange} />
       </div>
-      <div className='save-button' onClick={console.log(EditorState)}>save</div>
+      {/* <button className='save-button' onClick={handleSave}>save</button> */}
     </div> 
     )
   }
