@@ -735,11 +735,9 @@ const TextPrompt = () => {
     
     const randomTextPrompt = JSON.stringify(randomTextObject)
 
-    console.log(randomTextPrompt)
-
     return (
         <div>
-        <h4>Random Text Prompt: </h4>    
+        <h4>Random Writing Prompt: </h4>    
             {randomTextPrompt}
         </div>
     )
