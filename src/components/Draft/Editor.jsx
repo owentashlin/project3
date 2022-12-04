@@ -1,6 +1,8 @@
 import React from 'react'
 import {Editor, EditorState, RichUtils} from 'draft-js';
+import SaveButton from './Save';
 import './Editor.css'
+
 
 class WritingApp extends React.Component {
   constructor(props) {
@@ -41,12 +43,6 @@ class WritingApp extends React.Component {
 		)
 	}
   
-  // handleSave = function() {
-  //   let body = EditorState
-  //   JSON.stringify(EditorState)
-  //   console.log(body)
-  // }
-
   render() {
     return (
     <div className='editorContainer'> 
@@ -62,7 +58,7 @@ class WritingApp extends React.Component {
       <div className='editors'>
         <Editor editorState={this.state.editorState} handleKeyCommand={this.handleKeyCommand} onChange={this.onChange} />
       </div>
-      {/* <button className='save-button' onClick={handleSave}>save</button> */}
+        <SaveButton />
     </div> 
     )
   }
