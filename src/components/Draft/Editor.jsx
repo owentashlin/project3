@@ -1,7 +1,7 @@
 import React from 'react'
 import {Editor, EditorState, RichUtils} from 'draft-js';
 import SaveButton from './Save';
-import './Editor.css'
+import './Draft.css'
 
 
 class WritingApp extends React.Component {
