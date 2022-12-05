@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import {Link} from "react"
+//import {Link} from "react"
 
 const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=kMm3jzf527AlDFU3jqHcA3eWwySbEvpk`
 
@@ -25,8 +25,7 @@ const BookRec = () => {
 
                 return (
                     <article key={rank}>
-                        <div>
-                            {/* <Link to={buy_links._[0].url}>Link</Link> */}
+                        <div>                      
                             <img src={book_image} alt={title}/>
                         </div>
                         <div>
@@ -36,7 +35,7 @@ const BookRec = () => {
                             <p><strong>Buy Now:</strong></p>
                             <ul>
                                 {buy_links.map((link) =>{
-                                    const {name, url} = link
+                                    const {name} = link
                                     return (
                                     <div key={name}>
                                         <a href={url} target="_blank">{name}</a>
@@ -51,29 +50,6 @@ const BookRec = () => {
     </>
     )
 }
-
-//function BookRec (){
-// const [bookList, setBookList] = useState([])
-// useEffect(() => {
-//     url()
-// }, [])
-
-// const url = async() => {
-//     const r = await fetch('https://api.nytimes.com/svc/books/v3/lists.json')
-//     setBookList(await response.json())
-// }
-//     function getNum(min, max) {
-//         return Math.round(Math.random()*(min-max)+min)
-//     }
-
-//     let bookNum = getNum(100, 400)
-//     return ( 
-//         <div className="movie-card">
-//             <h4>NYT Best Seller List Recommends: </h4>
-//             <img src={`https://api.nytimes.com/svc/books/v3/lists.json?${bookNum}`}></img>
-//         </div>
-//      )
-// }
 
 export default BookRec;
 

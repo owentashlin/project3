@@ -13,13 +13,13 @@ export default class SignUpForm extends Component {
   handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
-      const formData = { ...this.state };
-      delete formData.confirm;
-      delete formData.error;
+      const formData = { ...this.state }
+      delete formData.confirm
+      delete formData.error
     
-      const user = await signUp(formData);
+      const user = await signUp(formData)
 
-      this.props.setUser(user);
+      this.props.setUser(user)
       
     } catch {
       this.setState({

@@ -6,13 +6,13 @@ module.exports= {
 
 async function create(req, res) {
     try{
-        let book = new Book(req.body)
+        let book = await Book.create(req.body)
         let user = await User.findById(req.body.user)
         user.books.push(book)
-        await user.save()
-        await book.save()
+        res.json(book)
+        console.log(book)
     }
     catch(err){
-        console.log(err)
+        res.status(400).json(err)
     }
 }

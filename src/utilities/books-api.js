@@ -6,7 +6,7 @@ export function getLibrary() {
     return sendRequest(`${BASE_URL}/library`)
 }
 
-export function addBookToLibrary(bookId) {
-    return sendRequest(`${BASE_URL}/library/books/${bookId}`, 'POST')
+export function addBook(bookId) {
+    return sendRequest(BASE_URL, 'POST', bookId)
 }
 

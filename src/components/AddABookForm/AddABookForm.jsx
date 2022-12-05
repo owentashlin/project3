@@ -1,25 +1,35 @@
+import {useState} from "react"
+
 function AddBook() {
-    
-    const handleSubmit = async (book) => {
-        try {
-            console.log(book)
-        } catch {
-            console.log('error, could not save item')
-        }
+    const [book, setBook] = useState({
+        title: '',
+        author: '',
+        genre: '',
+        status: ''
+    })
+
+    const handleChange= (event) => {
+        setBook({...book, [event.target.name]:event.target.value})
     }
-    
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        console.log(book)
+        setBook({title:'', author:'', genre:'', status:''})
+    }
+
     return ( 
         <>
         <h3>Add A Book to Your Library</h3>
         <form autoComplete='off' onSubmit={handleSubmit}>
             <label>Title: </label>
-            <input type='text' name='title' required/>
+            <input type='text' name='title' value={book.title} onChange={handleChange} required/>
             &nbsp;
             <label>Author: </label>
-            <input type='text' name='author'/>
+            <input type='text' name='author' value={book.author} onChange={handleChange} required/>
             &nbsp;
             <label>Genre: </label>
-            <select name='genre' required>
+            <select name='genre' value={book.genre} onChange={handleChange} required>
                 <option value=''></option>
                 <option value='romance'>Romance</option>
                 <option value='history'>History</option>
@@ -32,15 +42,15 @@ function AddBook() {
             </select>
             &nbsp;
             <label>Status: </label>
-            <select name='status'>
+            <select name='status' value={book.status} onChange={handleChange} required>
                 <option value='to-read'>On the Pile</option>
                 <option value='finished'>Finished</option>
             </select>
             &nbsp;
-            <button type='submit' value='add-book'>Add to Library</button>
+            <button type='submit' value='Submit'>Add to Library</button>
         </form>
         </>    
      )
 }
 
-export default AddBook;
+export default AddBook
