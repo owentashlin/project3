@@ -1,75 +1,50 @@
-"The Reading Room" is a library and creative writing app that allows the user to log, review and share books they are reading. It also provides text and visual writing prompts to inspire users to create and share their own work, and allows fellow users to give feedback on that work.
+**The Reading Room**
+<hr></hr>
+
+"The Reading Room" is a library and creative writing app that allows the user to log, review and share books they are reading and create their own original work.
+
+
+In the Library section, users can log and review books, and also peruse suggesstions for new finds from the NYT Bestseller list. In the Writing section, the app provides text and visual writing prompts to inspire users to create and share their own original work, as well as an imbedded richtext editor to allow them to write within the app or paste work created in other programs so they can be saved and shared online.
+
+
+Finally, it allows users to see the library and reviews of other users, and allows users to give feedback on original work.
+
 
 Logo icon "Book" created by Jojoid, from the Noun Project. (CCBY3.0) <a href="https://thenounproject.com/browse/icons/term/book/" target="_blank" title="Book Icons">Noun Project</a>
 
 <hr></hr>
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Screen Shots**
 
-## Available Scripts
+*will go here once I have something worth looking at ;)*
 
-In the project directory, you can run:
+*ERD*
+![ERD](/public/images/Project3-%20ERD-sm.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<hr></hr>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Technologies Used**
+- JavaScript
+- CSS
+- HTML5
+- React
+- Express/Node.js
+- MongoDB Atlas
+- Mongoose
+- NYT Books API
+- LoremPicsum API
+<hr></hr>
 
-### `npm test`
+**Links**
+GitHub Repo: https://github.com/owentashlin/project3
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Trello Planning Board: https://trello.com/b/U8GWoqSM/project-3-planning
 
-### `npm run build`
+Heroku deployed site: will go here when we have it
+<hr></hr>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Next Steps**
+Will update once the project is done and we see how far I got...
+<hr></hr>
+ 
