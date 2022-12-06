@@ -35,7 +35,7 @@ const BookRec = () => {
                             <p><strong>Buy Now:</strong></p>
                             <ul>
                                 {buy_links.map((link) =>{
-                                    const {name} = link
+                                    const {name, url} = link
                                     return (
                                     <div key={name}>
                                         <a href={url} target="_blank">{name}</a>

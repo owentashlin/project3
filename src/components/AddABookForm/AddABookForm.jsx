@@ -16,7 +16,7 @@ function AddBook({formData}) {
     const handleSubmit = async function(event) {
         event.preventDefault()
         console.log('form', book)
-        await saveBook()
+        await saveBook(book)
         //setBook({title:'', author:'', genre:'', status:''})
 
     }
