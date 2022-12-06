@@ -1,4 +1,5 @@
 import {useState} from "react"
+import { saveBook } from "../../utilities/books-service"
 
 function AddBook() {
     const [book, setBook] = useState({
@@ -12,10 +13,12 @@ function AddBook() {
         setBook({...book, [event.target.name]:event.target.value})
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async function(event) {
         event.preventDefault()
-        console.log(book)
-        setBook({title:'', author:'', genre:'', status:''})
+        let book = await saveBook()
+        console.log('book')
+        // setBook({title:'', author:'', genre:'', status:''})
+
     }
 
     return ( 
