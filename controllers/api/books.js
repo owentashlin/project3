@@ -10,7 +10,7 @@ async function create(req, res) {
         let user = await User.findById(req.body.user)
         user.books.push(book)
         res.json(book)
-        console.log(book)
+        console.log('controller', book)
     }
     catch(err){
         res.status(400).json(err)

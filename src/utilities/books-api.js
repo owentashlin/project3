@@ -6,7 +6,7 @@ export function getLibrary() {
     return sendRequest(`${BASE_URL}/library`)
 }
 
-export function addBook(formData) {
+export function saveBook(formData) {
     return sendRequest(`${BASE_URL}/new`, 'POST', formData)
 }
 

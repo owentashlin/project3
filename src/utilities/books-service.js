@@ -1,8 +1,8 @@
-import * as booksAPI from './books-api'
+import * as booksAPI from '../utilities/books-api'
 
-export async function saveBook(formData, book) {
+export async function saveBook(formData) {
     await booksAPI.saveBook(formData)
     return (
-        console.log('books-service', book)
+        console.log('books-service')
     )
 }
