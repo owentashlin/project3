@@ -5,14 +5,16 @@ module.exports= {
 }
 
 async function create(req, res) {
+    console.log('controller log')
     try{
-        let book = await Book.create(req.body)
-        let user = await User.findById(req.body.user)
-        user.books.push(book)
+        console.log(req.body)
+        const book = await Book.create(req.body)
+        console.log(book)
         res.json(book)
-        console.log('controller', book)
     }
     catch(err){
+        console.log('controller error')
         res.status(400).json(err)
     }
 }
+

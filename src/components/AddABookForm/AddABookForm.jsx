@@ -1,7 +1,7 @@
 import {useState} from "react"
-import { saveBook } from "../../utilities/books-service"
+import * as bookApi from "../../utilities/books-api"
 
-function AddBook({formData}) {
+function AddBook() {
     const [book, setBook] = useState({
         title: '',
         author: '',
@@ -16,7 +16,7 @@ function AddBook({formData}) {
     const handleSubmit = async function(event) {
         event.preventDefault()
         console.log('form', book)
-        await saveBook(book)
+        let newBook = await bookApi.saveBook(book)
         //setBook({title:'', author:'', genre:'', status:''})
 
     }

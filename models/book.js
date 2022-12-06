@@ -5,7 +5,7 @@ const bookSchema = new Schema ({
     title: {type: String, required: true},
     author: {type: String},
     genre: {type: String},
-    status: {type: Boolean}
+    status: {type: String}
 })
 
-module.exports = bookSchema
+module.exports = mongoose.model('Book', bookSchema)

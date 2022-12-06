@@ -7,8 +7,7 @@ require('dotenv').config();
 require('./config/database');
 
 const app = express()
-
-const booksRouter = ('./routes/api/books')
+//const booksRouter = express.Router()
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -25,6 +24,8 @@ app.use('/api/users', require('./routes/api/users'))
 const ensureLoggedIn = require('./config/ensureLoggedIn')
 
 app.use('/api/books', require('./routes/api/books'))
+
+//app.use('/routes/api/books', booksRouter)
 
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above

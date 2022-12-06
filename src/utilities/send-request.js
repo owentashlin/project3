@@ -1,6 +1,9 @@
 import { getToken } from './users-service'
 
+
+
 export default async function sendRequest(url, method = 'GET', payload = null) {
+  console.log(payload)
   const options = { method }
   if (payload) {
     options.headers = { 'Content-Type': 'application/json' }
@@ -14,6 +17,7 @@ export default async function sendRequest(url, method = 'GET', payload = null) {
   }
 
   const res = await fetch(url, options)
+  console.log('fetch')
   if (res.ok) return res.json()
   throw new Error('Bad Request')
 }
