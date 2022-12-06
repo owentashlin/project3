@@ -1,7 +1,8 @@
 const Book = require('../../models/book')
 
 module.exports= {
-    create
+    create,
+    show
 }
 
 async function create(req, res) {
@@ -16,5 +17,9 @@ async function create(req, res) {
         console.log('controller error')
         res.status(400).json(err)
     }
+}
+
+async function show(req, res) {
+    console.log('show reader library')
 }
 

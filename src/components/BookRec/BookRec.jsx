@@ -1,8 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-//import {Link} from "react"
-
-const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=kMm3jzf527AlDFU3jqHcA3eWwySbEvpk`
 
 const BookRec = () => {
     const [books, setBooks] = useState([])
