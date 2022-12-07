@@ -1,37 +1,23 @@
 import {useState, useEffect} from 'react'
-import * as booksAPI from '../../utilities/books-api'
 import sendRequest from '../../utilities/send-request' 
-//import axios from 'axios'
+import BookList from '../BookList/BookList'
 
-function ReaderList({user}) {
-    const [books, setBooks] = useState([])
-    console.log('ajax request', user)
-    useEffect(function(books){
-        async function getBooks() {
-        const books = await sendRequest(`/api/books/${user._id}`)
-        console.log(books)
-    }
-    getBooks()
-    console.log('ajax says', books)
+
+function ReaderList({user, books, book, title, author, genre, status}) {
+    const [bookList, setBookList] = useState([])
+
+    useEffect(function(){
+        async function getBookList() {
+            const bookList = await sendRequest(`/api/books/${user._id}`)
+            setBookList(bookList)
+        }
+        getBookList()
+        console.log(bookList)
     }, [])
 
     return ( 
         <>
-        <h4>Your Reading List:</h4>
-        {books.map((book) => {
-            const{title, author, genre, status} = book
-            return(
-                <div>
-                    console.log('reading list')
-                    <ul>
-                        <li>{title}</li>
-                        <li>{author}</li>
-                        <li>{genre}</li>
-                        <li>{status}</li>
-                    </ul>
-                </div>
-            )
-        })}
+            <BookList user={user} books={books} book={book} title={title} author={author} genre={genre} status={status} />
         </>
      )
 }

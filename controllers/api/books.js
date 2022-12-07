@@ -1,9 +1,8 @@
-const book = require('../../models/book')
 const Book = require('../../models/book')
 
 module.exports= {
     create,
-    show
+    index
 }
 
 async function create(req, res) {
@@ -19,9 +18,11 @@ async function create(req, res) {
     }
 }
 
-async function show(req, res) {
-    console.log(req.params.id)
-    const response = await Book.find({user:req.params.id})
-    console.log(response)
+async function index(req, res) {
+    console.log("index", req.params.id)
+    const bookList = await Book.find({user: req.params.id})
+    console.log("after index", bookList)
+    res.json(bookList)
 }
+
 

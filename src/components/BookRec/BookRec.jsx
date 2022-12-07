@@ -17,7 +17,7 @@ const BookRec = () => {
     <h3>NYT Best Seller List: Top 15 Hardcover Fiction Recommendations</h3>
         <section>
             {books.map((book) => {
-                const{author, book_image, buy_links, description, rank, title}  = book
+                const{author, book_image, buy_links, description, rank, title} = book
 
                 return (
                     <article key={rank}>
