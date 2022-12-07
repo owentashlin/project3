@@ -18,7 +18,7 @@ export default function App() {
           <NavBar user={user}/>
             <Routes>
               <Route path='/' element={<Home/>}></Route> 
-              <Route path='/library' element={<LibraryPage/>}></Route> 
+              <Route path='/library' element={<LibraryPage user={user}/>}></Route> 
               <Route path='/writers_corner' element={<WritersCornerPage/>}></Route> 
             </Routes>
         </div>    

@@ -23,12 +23,8 @@ app.use('/api/users', require('./routes/api/users'))
 // Protect all routes in the items router
 const ensureLoggedIn = require('./config/ensureLoggedIn')
 
-app.use('/api/books', require('./routes/api/books'))
+app.use('/api/books', ensureLoggedIn, require('./routes/api/books'))
 
-//app.use('/routes/api/books', booksRouter)
-
-// "catch-all" route that will match all GET requests
-// that don't match an API route defined above
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });

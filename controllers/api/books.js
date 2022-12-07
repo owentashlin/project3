@@ -1,3 +1,4 @@
+const book = require('../../models/book')
 const Book = require('../../models/book')
 
 module.exports= {
@@ -10,7 +11,6 @@ async function create(req, res) {
     try{
         console.log(req.body)
         const book = await Book.create(req.body)
-        console.log(book)
         res.json(book)
     }
     catch(err){
@@ -20,6 +20,8 @@ async function create(req, res) {
 }
 
 async function show(req, res) {
-    console.log('show reader library')
+    console.log(req.params.id)
+    const response = await Book.find({user:req.params.id})
+    console.log(response)
 }
 

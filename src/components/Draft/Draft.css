@@ -1,14 +1,12 @@
 .editorContainer {
   padding: 1em;
-  margin: 1em;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Raleway", sans-serif, monospace;
 }
 
 .editors {
   border: 1px blue solid;
   padding: 1em;
-  margin: 1em;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Raleway", sans-serif, monospace;
   font-size: 90%;
   text-align: left;
 }
@@ -16,7 +14,7 @@
 button {
   border: 1px solid black;
   /* width: 30px; */
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Raleway", sans-serif, monospace;
   font-size: 16px;
   margin: 10px;
 }
@@ -24,6 +22,6 @@ button {
 .save-button {
   border: 1px solid black;
   width: 60px;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Raleway", sans-serif, monospace;
   font-size: 16px;
 }

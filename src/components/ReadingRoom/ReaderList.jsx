@@ -1,23 +1,28 @@
 import {useState, useEffect} from 'react'
-import axios from 'axios'
+import * as booksAPI from '../../utilities/books-api'
+import sendRequest from '../../utilities/send-request' 
+//import axios from 'axios'
 
-function ReaderList() {
+function ReaderList({user}) {
     const [books, setBooks] = useState([])
-    
-    useEffect(() => {
-        const fetchBooks = async () => {
-            const res = await axios.get(`https://localhost3000/api/books/show`)
-            setBooks(res.data.results.books)
-        }
+    console.log('ajax request', user)
+    useEffect(function(books){
+        async function getBooks() {
+        const books = await sendRequest(`/api/books/${user._id}`)
+        console.log(books)
+    }
+    getBooks()
+    console.log('ajax says', books)
     }, [])
 
     return ( 
         <>
-        <h4>Your Reading List</h4>
+        <h4>Your Reading List:</h4>
         {books.map((book) => {
             const{title, author, genre, status} = book
             return(
                 <div>
+                    console.log('reading list')
                     <ul>
                         <li>{title}</li>
                         <li>{author}</li>
@@ -29,7 +34,6 @@ function ReaderList() {
         })}
         </>
      )
-     console.log('reading list')
 }
 
 export default ReaderList;

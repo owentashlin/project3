@@ -10,18 +10,19 @@ function NavBar({ user, setUser }) {
       userService.logOut();
       setUser(null);
     }
-
+    
     return (
     <>
     <nav className='nav'>
+        <img className='book-icon' src='/images/Book-small.png' alt='book icon'/>
         <h4>Welcome {user.name}</h4>
-      <Link to='/'>Home</Link>
+      <Link className="w3-bar-item w3-button" to='/'>Home</Link>
       <br></br>
-      <Link to='/library'>Library</Link>
+      <Link className="w3-bar-item w3-button" to='/library'>Library</Link>
       <br></br>
-      <Link to='/writers_corner'>The Writer's Corner</Link>
+      <Link className="w3-bar-item w3-button" to='/writers_corner'>The Writer's Corner</Link>
       <br></br>
-      <Link to='' onClick={handleLogOut}>Log Out</Link>
+      <Link className="w3-bar-item w3-button" to='' onClick={handleLogOut}>Log Out</Link>
       <hr></hr>
     </nav>
     </>

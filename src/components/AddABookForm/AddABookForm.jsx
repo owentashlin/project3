@@ -1,23 +1,28 @@
 import {useState} from "react"
 import * as bookApi from "../../utilities/books-api"
+import * as userApi from '../../utilities/users-service'
 
-function AddBook() {
+function AddBook({user}) {
+    console.log(user)
     const [book, setBook] = useState({
         title: '',
         author: '',
         genre: '',
-        status: ''
+        status: '',
+        user: `${user._id}`
     })
 
     const handleChange= (event) => {
         setBook({...book, [event.target.name]:event.target.value})
     }
-
+    
     const handleSubmit = async function(event) {
         event.preventDefault()
         console.log('form', book)
+        //await userApi.getUser(user)
+        //console.log('form log 2', user)
         await bookApi.saveBook(book)
-        setBook({title:'', author:'', genre:'', status:''})
+        //setBook({title:'', author:'', genre:'', status:'', user:''})
     }
 
     return ( 

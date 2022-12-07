@@ -8,7 +8,6 @@ const BookRec = () => {
         const fetchBooks = async () => {
             const res = await axios.get(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${process.env.REACT_APP_BOOKS_API_KEY}`)
             setBooks(res.data.results.books)
-            console.log(res.data.results.books)
         }
         fetchBooks()
     }, [])
@@ -35,7 +34,7 @@ const BookRec = () => {
                                     const {name, url} = link
                                     return (
                                     <div key={name}>
-                                        <a href={url} target="_blank">{name}</a>
+                                        <a href={url} target="_blank" rel="noreferrer">{name}</a>
                                     </div>)
                                 })}
                             </ul>
