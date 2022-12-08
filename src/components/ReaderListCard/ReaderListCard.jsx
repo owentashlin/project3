@@ -1,4 +1,3 @@
-import BookList from '../BookList/BookList';
 import './ReaderCard.css'
 
 function ReaderListCard({book}) {

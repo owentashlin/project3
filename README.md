@@ -3,11 +3,16 @@
 
 "The Reading Room" is a library and creative writing app that allows the user to log, review and share books they are reading and create their own original work.
 
+When the app loads the Home view, the user can peruse suggesstions for new finds from the NYT Bestseller list
 
-In the Library section, users can log and review books, and also peruse suggesstions for new finds from the NYT Bestseller list. In the Writing section, the app provides text and visual writing prompts to inspire users to create and share their own original work, as well as an imbedded richtext editor to allow them to write within the app or paste work created in other programs so they can be saved and shared online.
+
+In the Library section, users can log books and indicate if they have read them or if they are still "on the pile" (i.e. in the wait to be read pile). 
 
 
-Finally, it allows users to see the library and reviews of other users, and allows users to give feedback on original work.
+In the Writing section, the app provides text and visual writing prompts to inspire users to create and share their own original work, as well as an imbedded richtext editor to allow them to write within the app or paste work created in other programs so they can be saved and shared online(in progress).
+
+
+Finally, it allows users to see the library and reviews of other users, and allows users to give feedback on original work(in progress).
 
 
 Logo icon "Book" created by Jojoid, from the Noun Project. (CCBY3.0) <a href="https://thenounproject.com/browse/icons/term/book/" target="_blank" title="Book Icons">Noun Project</a>
@@ -34,6 +39,7 @@ Logo icon "Book" created by Jojoid, from the Noun Project. (CCBY3.0) <a href="ht
 - Mongoose
 - NYT Books API
 - LoremPicsum API
+- W3 Navbar CSS styling
 <hr></hr>
 
 **Links**

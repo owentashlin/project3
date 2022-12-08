@@ -13,3 +13,8 @@
     color: var(--text-light);
     cursor: pointer;
   }
+
+ .auth-page {
+  background-color: rgba(192, 221, 221);
+  background: linear-gradient(180deg, rgba(192, 221, 221) 0%, rgba(255,255,255,1) 100%);
+  }
