@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import './BookRec.css'
 
 const BookRec = () => {
     const [books, setBooks] = useState([])
@@ -14,26 +15,26 @@ const BookRec = () => {
 
     return (
     <>
-    <h3>NYT Best Seller List: Top 15 Hardcover Fiction Recommendations</h3>
-        <section>
+    <h3 className='NYTheader'>NYT Best Seller List: Top 15 Hardcover Fiction Recommendations</h3>
+        <section className='books' >
             {books.map((book) => {
                 const{author, book_image, buy_links, description, rank, title} = book
 
                 return (
-                    <article key={rank}>
+                    <article className='article' key={rank}>
                         <div>                      
-                            <img src={book_image} alt={title}/>
+                            <img src={book_image} alt={title} className='book-cover' />
                         </div>
                         <div>
                             <h3><u>{title}</u></h3>
                             <p><strong>Author: {author}</strong></p>
-                            <p>{description}</p>
-                            <p><strong>Buy Now:</strong></p>
-                            <ul>
+                            <p className='description'>{description}</p>
+                            <h6><strong>Buy Now:</strong></h6>
+                            <ul className='buy-links' >
                                 {buy_links.map((link) =>{
                                     const {name, url} = link
                                     return (
-                                    <div key={name}>
+                                    <div className='links' key={name}>
                                         <a href={url} target="_blank" rel="noreferrer">{name}</a>
                                     </div>)
                                 })}

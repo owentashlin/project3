@@ -1,0 +1,33 @@
+.books {
+    display: inline-block;
+}
+
+.book-cover {
+    width: 200px;
+}
+
+.description {
+    text-align: center;
+    margin: auto;
+}
+
+.article {
+    width: 400px;
+    background: linear-gradient(180deg, rgb(192, 221, 221) 0%, rgba(255,255,255,1) 100%);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 15px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-left: -10%;
+}
+
+.NYTheader {
+    width: 500px;
+    display: flex;
+    margin: auto;
+    padding: 15px;
+}

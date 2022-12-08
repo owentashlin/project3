@@ -1,3 +1,5 @@
+import '../Draft/Draft.css'
+
 const textPrompts = [
     {prompt: 'Outside the Window: What’s the weather outside your window doing right now? If that’s not inspiring, what’s the weather like somewhere you wish you could be?'},
 
@@ -729,14 +731,14 @@ const textPrompts = [
     ]
    
 const TextPrompt = () => {
-    const randomTextIndex = Math.floor(Math.random() * textPrompts.length)
+    let randomTextIndex = Math.floor(Math.random() * textPrompts.length)
 
-    const randomTextObject = textPrompts[randomTextIndex]
+    let randomTextObject = textPrompts[randomTextIndex]
     
-    const randomTextPrompt = JSON.stringify(randomTextObject)
+    let randomTextPrompt = JSON.stringify(randomTextObject.prompt)
 
     return (
-        <div>
+        <div className='text-prompt'>
         <h4>Random Writing Prompt: </h4>    
             {randomTextPrompt}
         </div>

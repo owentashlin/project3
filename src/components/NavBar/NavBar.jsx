@@ -14,16 +14,14 @@ function NavBar({ user, setUser }) {
     return (
     <>
     <nav className='nav'>
+        <ul className='nav-list'>
         <img className='book-icon' src='/images/Book-small.png' alt='book icon'/>
-        <h4>Welcome {user.name}</h4>
-      <Link className="w3-bar-item w3-button" to='/'>Home</Link>
-      <br></br>
-      <Link className="w3-bar-item w3-button" to='/library'>Library</Link>
-      <br></br>
-      <Link className="w3-bar-item w3-button" to='/writers_corner'>The Writer's Corner</Link>
-      <br></br>
-      <Link className="w3-bar-item w3-button" to='' onClick={handleLogOut}>Log Out</Link>
-      <hr></hr>
+          <li><Link className="w3-bar-item w3-button" to='/'>Home</Link></li>
+          <li><Link className="w3-bar-item w3-button" to='/library'>Library</Link></li>
+          <li><Link className="w3-bar-item w3-button" to='/writers_corner'>The Writer's Corner</Link></li>
+        <h4><strong>Welcome: {user.name}</strong></h4>
+          <li><Link className="w3-bar-item w3-button" to='' onClick={handleLogOut}>Log Out</Link></li>
+        </ul>
     </nav>
     </>
   )

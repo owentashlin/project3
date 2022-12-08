@@ -1,6 +1,6 @@
 import {useState} from "react"
 import * as bookApi from "../../utilities/books-api"
-import * as userApi from '../../utilities/users-service'
+import './AddABookForm.css'
 
 function AddBook({user}) {
     console.log(user)
@@ -19,22 +19,20 @@ function AddBook({user}) {
     const handleSubmit = async function(event) {
         event.preventDefault()
         console.log('form', book)
-        //await userApi.getUser(user)
-        //console.log('form log 2', user)
         await bookApi.saveBook(book)
-        //setBook({title:'', author:'', genre:'', status:'', user:''})
+        setBook({title:'', author:'', genre:'', status:'', user:''})
     }
 
     return ( 
         <>
         <h3>Add A Book to Your Library</h3>
-        <form autoComplete='off' onSubmit={handleSubmit}>
+        <form className='add-book' autoComplete='off' onSubmit={handleSubmit}>
             <label>Title: </label>
             <input type='text' name='title' value={book.title} onChange={handleChange} required/>
-            &nbsp;
+            <br></br>
             <label>Author: </label>
             <input type='text' name='author' value={book.author} onChange={handleChange} required/>
-            &nbsp;
+            <br></br>
             <label>Genre: </label>
             <select name='genre' value={book.genre} onChange={handleChange} required>
                 <option value=''></option>
@@ -47,14 +45,14 @@ function AddBook({user}) {
                 <option value='mystery'>Mystery</option>
                 <option value='non-fiction'>Non-Fiction</option>
             </select>
-            &nbsp;
+            <br></br>
             <label>Status: </label>
             <select name='status' value={book.status} onChange={handleChange} required>
                 <option value='to-read'>On the Pile</option>
                 <option value='finished'>Finished</option>
             </select>
-            &nbsp;
-            <button type='submit' value='Submit'>Add to Library</button>
+            <br></br>
+            <button type='submit' value='Submit'>Save to Personal Library</button>
         </form>
         </>    
      )

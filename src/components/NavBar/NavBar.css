@@ -1,9 +1,21 @@
+
 .nav {
-  padding: 15px;
-  text-align: left;
+  position: sticky;
   font-family: "Raleway", sans-serif, monospace;
+  top: 0;
+  margin: 0;
 }
 
 .book-icon {
-  width: 100px;
+  width: 75px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  background-color: rgba(192, 221, 221);
+  background: linear-gradient(180deg, rgba(192, 221, 221) 0%, rgba(255,255,255,1) 100%);
+  width: 100%;
+  padding: 5px; 
 }

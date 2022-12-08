@@ -14,7 +14,7 @@
 button {
   border: 1px solid black;
   /* width: 30px; */
-  font-family: "Raleway", sans-serif, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   margin: 10px;
 }
@@ -22,6 +22,12 @@ button {
 .save-button {
   border: 1px solid black;
   width: 60px;
-  font-family: "Raleway", sans-serif, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
+}
+
+.text-prompt {
+  width: 250px;
+  text-align: center;
+  margin: auto;
 }
