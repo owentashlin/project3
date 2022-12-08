@@ -1,5 +1,5 @@
 import React from 'react'
-import {Editor, EditorState, RichUtils} from 'draft-js';
+import {Editor, EditorState, RichUtils, convertToRaw, convertFromRaw} from 'draft-js';
 import SaveButton from './Save';
 import './Draft.css'
 
@@ -7,12 +7,21 @@ import './Draft.css'
 class WritingApp extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      editorState: EditorState.createEmpty()
+    this.state = { }
+
+    const content = window.localStorage.getItem('content')
+
+    if (content) {
+      this.state.editorState = EditorState.createWithContent(convertFromRaw(JSON.parse(content)))
+    } else {
+      this.state.editorState = EditorState.createEmpty()
     }
+    console.log(EditorState)
   }
 
   onChange = (editorState) => {
+    const contentState = editorState.getCurrentContent()
+    this.saveContent(contentState)
     this.setState({
       editorState
     })
@@ -42,6 +51,10 @@ class WritingApp extends React.Component {
 			RichUtils.toggleInlineStyle(this.state.editorState, "ITALIC")
 		)
 	}
+
+  saveContent = (content) => {
+    window.localStorage.setItem('content', JSON.stringify(convertToRaw(content)))
+  }
   
   render() {
     return (

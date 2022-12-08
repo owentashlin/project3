@@ -1,0 +1,11 @@
+.reader-card {
+    margin: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.reader-card-info{
+    border: 1px dotted black;
+    width: 200px;
+}
+

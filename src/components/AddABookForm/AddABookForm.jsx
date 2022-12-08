@@ -28,10 +28,10 @@ function AddBook({user}) {
         <h3>Add A Book to Your Library</h3>
         <form className='add-book' autoComplete='off' onSubmit={handleSubmit}>
             <label>Title: </label>
-            <input type='text' name='title' value={book.title} onChange={handleChange} required/>
+            <input className='title' type='text' name='title' value={book.title} onChange={handleChange} required/>
             <br></br>
             <label>Author: </label>
-            <input type='text' name='author' value={book.author} onChange={handleChange} required/>
+            <input className='author' type='text' name='author' value={book.author} onChange={handleChange} required/>
             <br></br>
             <label>Genre: </label>
             <select name='genre' value={book.genre} onChange={handleChange} required>
@@ -52,7 +52,7 @@ function AddBook({user}) {
                 <option value='finished'>Finished</option>
             </select>
             <br></br>
-            <button type='submit' value='Submit'>Save to Personal Library</button>
+            <button type='submit' value='Submit'>Save to Reading List</button>
         </form>
         </>    
      )

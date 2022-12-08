@@ -31,3 +31,8 @@ button {
   text-align: center;
   margin: auto;
 }
+
+.editorContainer {
+  max-width: 600px;
+  margin: auto;
+}

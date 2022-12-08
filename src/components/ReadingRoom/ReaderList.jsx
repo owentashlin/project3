@@ -3,13 +3,13 @@ import sendRequest from '../../utilities/send-request'
 import BookList from '../BookList/BookList'
 
 
-function ReaderList({user, books, book, title, author, genre, status}) {
+function ReaderList({user}) {
     const [bookList, setBookList] = useState([])
 
     useEffect(function(){
         async function getBookList() {
-            const bookList = await sendRequest(`/api/books/${user._id}`)
-            setBookList(bookList)
+            const books = await sendRequest(`/api/books/${user._id}`)
+            setBookList(books)
         }
         getBookList()
         console.log(bookList)
@@ -17,7 +17,7 @@ function ReaderList({user, books, book, title, author, genre, status}) {
 
     return ( 
         <>
-            <BookList user={user} books={books} book={book} title={title} author={author} genre={genre} status={status} />
+            <BookList user={user} bookList={bookList}/>
         </>
      )
 }
