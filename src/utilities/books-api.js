@@ -9,3 +9,8 @@ export function saveBook(formData) {
 export function show(userId) {
     return sendRequest(`${BASE_URL}/${userId}`)
 }
+
+export function deleteOne(bookId){
+    console.log('books api')
+    return sendRequest(`${BASE_URL}/${bookId}`)
+}

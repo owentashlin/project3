@@ -7,7 +7,7 @@ function PictPrompt() {
     return ( 
         <div className="movie-card">
             <h4>Random Image to Write a Story About: </h4>
-            <img src={`https://picsum.photos/300/400/?${picNum}`}></img>
+            <img src={`https://picsum.photos/300/400/?${picNum}`}alt='Random'></img>
         </div>
      )
 }

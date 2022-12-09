@@ -13,3 +13,11 @@ export async function show(userId) {
         console.log('showing books')
     )
 }
+
+export async function deleteOne(bookId) {
+    console.log('service log')
+    await booksAPI.deleteOne(bookId)
+    return (
+        console.log('deleting books')
+    )
+}

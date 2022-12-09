@@ -2,7 +2,8 @@ const Book = require('../../models/book')
 
 module.exports= {
     create,
-    index
+    index,
+    deleteOne
 }
 
 async function create(req, res) {
@@ -20,4 +21,7 @@ async function index(req, res) {
     res.json(bookList)
 }
 
-
+async function deleteOne (req, res) {
+    console.log(req.params.id)
+    let book = await Book.findOneAndDelete({_id: req.params.id})
+}

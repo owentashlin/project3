@@ -3,15 +3,14 @@ import './ReaderCard.css'
 
 
 
-function ReaderListCard({user, book, setBook}) {
+function ReaderListCard({book, setBook}) {
     
     const handleDelete = async () => {
-        console.log('delete' + book)
-        const response = await fetch(`/book/${user}`, {
+        console.log('delete', {book})
+        const response = await fetch(`/book/${book}`, {
             method: 'DELETE'
         }).then(res => res.json())
-        console.log(response)
-        setBook(response.books)
+        setBook(response.book)
     }
 
     return ( 
