@@ -12,7 +12,6 @@ function ReaderList({user}) {
             setBookList(books)
         }
         getBookList()
-        console.log(bookList)
     }, [])
 
     return ( 
@@ -22,4 +21,4 @@ function ReaderList({user}) {
      )
 }
 
-export default ReaderList;
+export default ReaderList

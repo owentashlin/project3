@@ -16,7 +16,7 @@ class WritingApp extends React.Component {
     } else {
       this.state.editorState = EditorState.createEmpty()
     }
-    console.log(EditorState)
+    console.log('content',EditorState)
   }
 
   onChange = (editorState) => {

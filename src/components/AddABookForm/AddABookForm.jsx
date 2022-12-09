@@ -3,7 +3,6 @@ import * as bookApi from "../../utilities/books-api"
 import './AddABookForm.css'
 
 function AddBook({user}) {
-    console.log(user)
     const [book, setBook] = useState({
         title: '',
         author: '',
@@ -17,8 +16,6 @@ function AddBook({user}) {
     }
     
     const handleSubmit = async function(event) {
-        //event.preventDefault()
-        console.log('form', book)
         await bookApi.saveBook(book)
         setBook({title:'', author:'', genre:'', status:'', user:''})
     }

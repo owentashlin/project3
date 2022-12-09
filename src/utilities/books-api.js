@@ -7,10 +7,5 @@ export function saveBook(formData) {
 }
 
 export function show(userId) {
-    console.log('api get request')
     return sendRequest(`${BASE_URL}/${userId}`)
 }
-
-// export function getById(id) {
-//     return sendRequest(`${BASE_URL}/${id}`)
-// }
