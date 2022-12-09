@@ -21,7 +21,20 @@ Logo icon "Book" created by Jojoid, from the Noun Project. (CCBY3.0) <a href="ht
 
 **Screen Shots**
 
-*will go here once I have something worth looking at ;)*
+**Home Screen**
+![HOME](/public/images/Home-small.jpg)
+
+**User Library**
+![LIBRARY](/public/images/Library-small.jpg)
+
+**Writer's Corner**
+![WRITERS-CORNER](/public/images/Writers-corner-small.jpg)
+
+**Log-In**
+![LOGIN](/public/images/log-in-small.jpg)
+
+**Sign-Up**
+![SIGNUP](/public/images/Sign-up-small.jpg)
 
 *ERD*
 ![ERD](/public/images/Project3-%20ERD-sm.png)
@@ -40,6 +53,8 @@ Logo icon "Book" created by Jojoid, from the Noun Project. (CCBY3.0) <a href="ht
 - NYT Books API
 - LoremPicsum API
 - W3 Navbar CSS styling
+- Draft.js React Framework
+
 <hr></hr>
 
 **Links**
@@ -51,6 +66,10 @@ Heroku deployed site: will go here when we have it
 <hr></hr>
 
 **Next Steps**
-Will update once the project is done and we see how far I got...
+- complete CRUD functionality, allowing users to update and delete books added to their library
+- save functionality available in the text editor, currently all text is saved in state and not able to be exported
+- allow for multiple users to view data of other users by enabling a public or private view state 
+- allow users to 'publish' work online, and for other users to give feedback (i.e. reviews)
+
 <hr></hr>
  
