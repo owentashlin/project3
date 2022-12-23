@@ -9,7 +9,7 @@ function WritersCornerPage() {
         <h1>The Writer's Corner</h1>
         <PictPrompt />
         <TextPrompt />
-        <WritingApp />
+        {/* <WritingApp /> */}
         </>
      )
 }

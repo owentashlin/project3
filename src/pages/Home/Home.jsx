@@ -3,7 +3,7 @@ import BookRec from '../../components/BookRec/BookRec'
 function Home() {
     return ( 
         <>
-        <h1>Home Page</h1>
+        <h1>The Reading Room</h1>
         <BookRec />
         </>
      );
